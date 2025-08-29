@@ -1,0 +1,400 @@
+{% extends 'base.html' %}
+{% block content %}
+<article class="detail">
+	<a class="back" href="{{ url_for('index', lang=lang) }}">{{ strings.back }}</a>
+	<header class="detail-header">
+		<h2 class="detail-title">{{ bear.name }}</h2>
+		<p class="detail-subtitle">{{ bear.summary }}</p>
+	</header>
+
+	<div class="detail-content">
+		<section class="detail-main">
+			<div class="detail-hero">
+				<img src="{{ url_for('static', filename=bear.images[0] if bear.images else bear.cover_image) }}" alt="{{ bear.name }}"
+					class="hero-image lightbox-image" data-index="0">
+			</div>
+			<div class="detail-info">
+				{% if bear.size %}
+				<p><strong>{{ strings.size }}:</strong> {{ bear.size }}</p>
+				{% endif %}
+				{% if bear.materials %}
+				<p><strong>{{ strings.materials }}:</strong> {{ bear.materials }}</p>
+				{% endif %}
+				{% if bear.formatted_date %}
+				<p><strong>{{ strings.published }}:</strong> {{ bear.formatted_date }}</p>
+				{% endif %}
+				{% if bear.description_html %}
+				<div class="detail-description">{{ bear.description_html | safe }}</div>
+				{% endif %}
+				{% if bear.store_links %}
+				<div class="store-links">
+					{% for title, link in bear.store_links.items() %}
+					<a href="{{ link }}" class="store-button" target="_blank" rel="noopener">{{ title }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
+		</section>
+
+		{% if bear.images %}
+		<section class="gallery">
+			<h3 class="gallery-title">{{ strings.gallery }}</h3>
+			<ul class="gallery-grid" role="list">
+				{% for image in bear.images[1:] %}
+				<li class="gallery-item">
+					<img src="{{ url_for('static', filename=image) }}" alt="{{ bear.name }} photo {{ loop.index + 1 }}"
+						loading="lazy" class="lightbox-image" data-index="{{ loop.index + 1 }}">
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+		{% endif %}
+	</div>
+</article>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+	<div class="lightbox-overlay"></div>
+	<div class="lightbox-container">
+		<button class="lightbox-close" aria-label="Close lightbox">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+			</svg>
+		</button>
+		<button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+			</svg>
+		</button>
+		<button class="lightbox-nav lightbox-next" aria-label="Next image">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+			</svg>
+		</button>
+		<div class="lightbox-content">
+			<img id="lightbox-image" src="" alt="">
+		</div>
+		<div class="lightbox-counter">
+			<span id="lightbox-counter-text"></span>
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const lightbox = document.getElementById('lightbox');
+		const lightboxImage = document.getElementById('lightbox-image');
+		const lightboxCounter = document.getElementById('lightbox-counter-text');
+		const closeBtn = document.querySelector('.lightbox-close');
+		const prevBtn = document.querySelector('.lightbox-prev');
+		const nextBtn = document.querySelector('.lightbox-next');
+		const overlay = document.querySelector('.lightbox-overlay');
+
+		// Get all images that can be opened in lightbox
+		const images = document.querySelectorAll('.lightbox-image');
+		let currentIndex = 0;
+		let isZoomed = false;
+		let startX, startY, translateX = 0, translateY = 0;
+
+		// Open lightbox
+		function openLightbox(index) {
+			currentIndex = index;
+			updateLightboxImage();
+			lightbox.classList.add('active');
+			document.body.style.overflow = 'hidden';
+			resetZoom();
+		}
+
+		// Close lightbox
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			document.body.style.overflow = '';
+			resetZoom();
+		}
+
+		// Update lightbox image
+		function updateLightboxImage() {
+			const currentImg = images[currentIndex];
+			lightboxImage.src = currentImg.src;
+			lightboxImage.alt = currentImg.alt;
+			lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+			resetTransform(false);
+			currentTranslateX = 0;
+		}
+
+		// Navigate to previous image
+		function prevImage() {
+			currentIndex = (currentIndex - 1 + images.length) % images.length;
+			updateLightboxImage();
+			resetZoom();
+		}
+
+		// Navigate to next image
+		function nextImage() {
+			currentIndex = (currentIndex + 1) % images.length;
+			updateLightboxImage();
+			resetZoom();
+		}
+
+		// Reset zoom and pan
+		function resetZoom() {
+			isZoomed = false;
+			translateX = 0;
+			translateY = 0;
+			lightboxImage.style.transform = 'scale(1) translate(0px, 0px)';
+			lightboxImage.style.cursor = 'zoom-in';
+		}
+
+		// Toggle zoom
+		function toggleZoom() {
+			if (isZoomed) {
+				resetZoom();
+			} else {
+				isZoomed = true;
+				lightboxImage.style.transform = 'scale(2) translate(0px, 0px)';
+				lightboxImage.style.cursor = 'zoom-out';
+			}
+		}
+
+		// Event listeners
+		images.forEach((img, index) => {
+			img.addEventListener('click', () => openLightbox(index));
+			img.style.cursor = 'pointer';
+		});
+
+		closeBtn.addEventListener('click', closeLightbox);
+		overlay.addEventListener('click', closeLightbox);
+		prevBtn.addEventListener('click', prevImage);
+		nextBtn.addEventListener('click', nextImage);
+
+		// Keyboard navigation
+		document.addEventListener('keydown', function (e) {
+			if (!lightbox.classList.contains('active')) return;
+
+			switch (e.key) {
+				case 'Escape':
+					closeLightbox();
+					break;
+				case 'ArrowLeft':
+					prevImage();
+					break;
+				case 'ArrowRight':
+					nextImage();
+					break;
+				case ' ':
+					e.preventDefault();
+					toggleZoom();
+					break;
+			}
+		});
+
+		// Mouse wheel zoom
+		lightboxImage.addEventListener('wheel', function (e) {
+			e.preventDefault();
+			if (e.deltaY < 0) {
+				// Zoom in
+				if (!isZoomed) toggleZoom();
+			} else {
+				// Zoom out
+				if (isZoomed) resetZoom();
+			}
+		});
+
+		// Click to zoom
+		lightboxImage.addEventListener('click', function (e) {
+			if (e.target === lightboxImage) {
+				toggleZoom();
+			}
+		});
+
+		// Pan when zoomed
+		lightboxImage.addEventListener('mousedown', function (e) {
+			if (!isZoomed) return;
+			e.preventDefault();
+			startX = e.clientX - translateX;
+			startY = e.clientY - translateY;
+			lightboxImage.style.cursor = 'grabbing';
+
+			function onMouseMove(e) {
+				translateX = e.clientX - startX;
+				translateY = e.clientY - startY;
+				lightboxImage.style.transform = `scale(2) translate(${translateX}px, ${translateY}px)`;
+			}
+
+			function onMouseUp() {
+				document.removeEventListener('mousemove', onMouseMove);
+				document.removeEventListener('mouseup', onMouseUp);
+				lightboxImage.style.cursor = 'zoom-out';
+			}
+
+			document.addEventListener('mousemove', onMouseMove);
+			document.addEventListener('mouseup', onMouseUp);
+		});
+
+		// --- Smooth swipe (touch only, show prev/next immediately) ---
+		const lightboxContent = document.querySelector('.lightbox-content');
+		const GAP_PX = 16; // gap between images
+		const isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+		let track; // will hold three images
+		let prevImgEl, nextImgEl; // neighbors
+		let trackInitialized = false;
+		let touchActive = false;
+		let touchStartX = 0;
+		let touchDeltaX = 0;
+		const swipeThresholdFraction = 0.25; // portion of width
+
+		function setNeighborSources() {
+			if (!trackInitialized) return;
+			const prevIdx = (currentIndex - 1 + images.length) % images.length;
+			const nextIdx = (currentIndex + 1) % images.length;
+			prevImgEl.src = images[prevIdx].src;
+			prevImgEl.alt = images[prevIdx].alt;
+			nextImgEl.src = images[nextIdx].src;
+			nextImgEl.alt = images[nextIdx].alt;
+		}
+
+		function buildTrack() {
+			if (images.length < 2) return; // no swipe if single image
+			if (!trackInitialized) {
+				track = document.createElement('div');
+				track.className = 'lightbox-swipe-track';
+				prevImgEl = document.createElement('img');
+				prevImgEl.className = 'lightbox-swipe-img';
+				nextImgEl = document.createElement('img');
+				nextImgEl.className = 'lightbox-swipe-img';
+				lightboxImage.classList.add('lightbox-swipe-img');
+				track.appendChild(prevImgEl);
+				track.appendChild(lightboxImage);
+				track.appendChild(nextImgEl);
+				lightboxContent.appendChild(track);
+				trackInitialized = true;
+			}
+			setNeighborSources();
+			centerTrack();
+		}
+
+		function centerTrack(animated=false) {
+			if (!track) return;
+			const translate = - (lightboxContent.clientWidth + GAP_PX);
+			if (animated) track.style.transition = 'transform 0.35s ease';
+			else track.style.transition = 'none';
+			track.style.transform = `translateX(${translate}px)`;
+			if (!animated) requestAnimationFrame(()=> track.style.transition = '');
+		}
+
+		if (isTouch) {
+			// Override navigation to update neighbors without rebuilding DOM (touch only)
+			const _prevNav = prevImage;
+			prevImage = function() { _prevNav(); setNeighborSources(); centerTrack(); };
+			const _nextNav = nextImage;
+			nextImage = function() { _nextNav(); setNeighborSources(); centerTrack(); };
+		}
+
+		if (isTouch) {
+			// Extend open to build track after image load (touch only)
+			const _open = openLightbox;
+			openLightbox = function(index){ _open(index); buildTrack(); };
+		}
+
+		if (isTouch) {
+			// Touch handlers (no desktop drag)
+			lightbox.addEventListener('touchstart', function(e){
+				if (!lightbox.classList.contains('active')) return;
+				if (isZoomed) return;
+				if (images.length < 2) return;
+				const t = e.touches[0];
+				touchActive = true;
+				touchStartX = t.clientX;
+				touchDeltaX = 0;
+				track && (track.style.transition = 'none');
+				centerTrack(false);
+			}, {passive:true});
+
+			lightbox.addEventListener('touchmove', function(e){
+				if (!touchActive) return;
+				const t = e.touches[0];
+				touchDeltaX = t.clientX - touchStartX;
+				const base = - (lightboxContent.clientWidth + GAP_PX);
+				track && (track.style.transform = `translateX(${base + touchDeltaX}px)`);
+				e.preventDefault();
+			}, {passive:false});
+
+			lightbox.addEventListener('touchend', function(){
+				if (!touchActive) return;
+				const width = lightboxContent.clientWidth;
+				const commitNext = touchDeltaX < -width * swipeThresholdFraction;
+				const commitPrev = touchDeltaX > width * swipeThresholdFraction;
+				if (!track) { touchActive = false; return; }
+				track.style.transition = 'transform 0.35s ease';
+				if (commitNext) {
+					const target = -(2 * (width + GAP_PX));
+					track.style.transform = `translateX(${target}px)`;
+					track.addEventListener('transitionend', function handler(){
+						track.removeEventListener('transitionend', handler);
+						nextImage();
+						track.style.transition = 'none';
+						centerTrack(false);
+						requestAnimationFrame(()=> track.style.transition='');
+					}, {once:true});
+				} else if (commitPrev) {
+					track.style.transform = 'translateX(0px)';
+					track.addEventListener('transitionend', function handler(){
+						track.removeEventListener('transitionend', handler);
+						prevImage();
+						track.style.transition = 'none';
+						centerTrack(false);
+						requestAnimationFrame(()=> track.style.transition='');
+					}, {once:true});
+				} else {
+					centerTrack(true);
+				}
+				touchActive = false;
+			}, {passive:true});
+
+			// Recenter on window resize (orientation change)
+			window.addEventListener('resize', ()=> centerTrack());
+		} else {
+			// Desktop: ensure any track is removed if created (e.g., after resize from touch emulation)
+			if (trackInitialized && track && track.parentNode) {
+				lightboxContent.replaceChild(lightboxImage, track);
+				trackInitialized = false;
+			}
+		}
+
+		// Provide stub to satisfy earlier calls
+		function resetTransform() {}
+		// --- end smooth swipe ---
+
+		// Double tap to zoom on mobile
+		let lastTap = 0;
+		lightboxImage.addEventListener('touchend', function(e) {
+			const currentTime = new Date().getTime();
+			const tapLength = currentTime - lastTap;
+			if (tapLength < 500 && tapLength > 0) {
+				e.preventDefault();
+				toggleZoom();
+			}
+			lastTap = currentTime;
+		}, { passive: false });
+
+		// Touch events for panning when zoomed
+		lightboxImage.addEventListener('touchstart', function(e) {
+			if (!isZoomed) return;
+			e.preventDefault();
+			const touch = e.touches[0];
+			startX = touch.clientX - translateX;
+			startY = touch.clientY - translateY;
+		});
+
+		lightboxImage.addEventListener('touchmove', function(e) {
+			if (!isZoomed) return;
+			e.preventDefault();
+			const touch = e.touches[0];
+			translateX = touch.clientX - startX;
+			translateY = touch.clientY - startY;
+			lightboxImage.style.transform = `scale(2) translate(${translateX}px, ${translateY}px)`;
+		});
+	});
+</script>
+{% endblock %}

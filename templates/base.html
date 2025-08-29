@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="{{ lang or 'en' }}">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4W13GRC01E"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-4W13GRC01E');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{# SEO Meta Tags #}
+	<title>{% if meta.title %}{{ meta.title }}{% else %}{{ strings.site_title }} — {{ strings.site_tagline }}{% endif %}
+	</title>
+	<meta name="description" content="{{ meta.description or strings.intro }}">
+	{% if meta.keywords %}
+	<meta name="keywords" content="{{ meta.keywords }}">
+	{% endif %}
+
+	{# Open Graph / Facebook #}
+	<meta property="og:type" content="{{ meta.og_type or 'website' }}">
+	<meta property="og:url" content="{{ meta.canonical_url }}">
+	<meta property="og:title" content="{{ meta.title or strings.site_title }}">
+	<meta property="og:description" content="{{ meta.description or strings.intro }}">
+	{% if meta.og_image %}
+	<meta property="og:image" content="{{ meta.og_image }}">
+	{% endif %}
+
+	{# Twitter #}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ meta.title or strings.site_title }}">
+	<meta name="twitter:description" content="{{ meta.description or strings.intro }}">
+	{% if meta.og_image %}
+	<meta name="twitter:image" content="{{ meta.og_image }}">
+	{% endif %}
+
+	{# Canonical URL #}
+	{% if meta.canonical_url %}
+	<link rel="canonical" href="{{ meta.canonical_url }}">
+	{% endif %}
+
+	{# Alternate Language Links #}
+	{% for alt_lang in SUPPORTED_LANGS %}
+	{% if alt_lang != lang %}
+	<link rel="alternate" hreflang="{{ alt_lang }}"
+		href="{{ meta.alternate_urls[alt_lang] if meta.alternate_urls else url_for(request.endpoint, lang=alt_lang, **request.view_args) }}">
+	{% endif %}
+	{% endfor %}
+
+	{# Manifest and Icons #}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+	<meta name="theme-color" content="#e7b8a3">
+	
+	{# Schema.org Markup #}
+	{% if meta.schema %}
+	<script type="application/ld+json">
+		{{ meta.schema | tojson | safe }}
+	</script>
+	{% endif %}
+
+	{# Styles #}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<meta name="color-scheme" content="light">
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="logo" href="{{ url_for('index', lang=lang) }}" aria-label="Home">
+				<img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo" width="64" height="64">
+			</a>
+			<div class="title-wrap">
+				<a class="logo" href="{{ url_for('index', lang=lang) }}">
+					<h1 class="site-title">{{ strings.site_title }}</h1>
+				</a>
+				<p class="site-tagline">{{ strings.site_tagline }}</p>
+			</div>
+			<button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+				<span class="nav-toggle-bar"></span>
+				<span class="nav-toggle-bar"></span>
+				<span class="nav-toggle-bar"></span>
+			</button>
+			<nav class="site-nav" id="primary-nav">
+				<a href="{{ url_for('index', lang=lang) }}">{{ strings.nav_gallery }}</a>
+				<a href="{{ url_for('about', lang=lang) }}">{{ strings.nav_about }}</a>
+				<a href="{{ url_for('contact', lang=lang) }}">{{ strings.nav_contact }}</a>
+				<div class="nav-lang" role="navigation" aria-label="Language selector">
+					{% if request.endpoint == 'index' %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('index', lang='en') }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('index', lang='ru') }}">RU</a>
+					{% elif request.endpoint == 'bear_detail' %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('bear_detail', lang='en', slug=request.view_args.get('slug', '')) }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('bear_detail', lang='ru', slug=request.view_args.get('slug', '')) }}">RU</a>
+					{% elif request.endpoint == 'about' %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('about', lang='en') }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('about', lang='ru') }}">RU</a>
+					{% elif request.endpoint == 'contact' %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('contact', lang='en') }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('contact', lang='ru') }}">RU</a>
+					{% elif request.endpoint == 'legal' %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('legal', lang='en') }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('legal', lang='ru') }}">RU</a>
+					{% else %}
+					<a class="{{ 'active' if lang == 'en' else '' }}" href="{{ url_for('index', lang='en') }}">EN</a>
+					<a class="{{ 'active' if lang == 'ru' else '' }}" href="{{ url_for('index', lang='ru') }}">RU</a>
+					{% endif %}
+				</div>
+				<div class="lang-trigger-wrapper">
+					<button class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" title="Change language">
+						<img src="{{ url_for('static', filename='images/icon-globe.png') }}" alt="Globe" width="22" height="22" loading="lazy">
+					</button>
+					<div id="lang-menu" class="lang-menu" role="menu" aria-label="Language selector">
+						<ul>
+							{% if request.endpoint == 'index' %}
+							<li><a role="menuitem" href="{{ url_for('index', lang='en') }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('index', lang='ru') }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% elif request.endpoint == 'bear_detail' %}
+							<li><a role="menuitem" href="{{ url_for('bear_detail', lang='en', slug=request.view_args.get('slug','')) }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('bear_detail', lang='ru', slug=request.view_args.get('slug','')) }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% elif request.endpoint == 'about' %}
+							<li><a role="menuitem" href="{{ url_for('about', lang='en') }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('about', lang='ru') }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% elif request.endpoint == 'contact' %}
+							<li><a role="menuitem" href="{{ url_for('contact', lang='en') }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('contact', lang='ru') }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% elif request.endpoint == 'legal' %}
+							<li><a role="menuitem" href="{{ url_for('legal', lang='en') }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('legal', lang='ru') }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% else %}
+							<li><a role="menuitem" href="{{ url_for('index', lang='en') }}" class="{{ 'active' if lang == 'en' else '' }}">English</a></li>
+							<li><a role="menuitem" href="{{ url_for('index', lang='ru') }}" class="{{ 'active' if lang == 'ru' else '' }}">Русский</a></li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© {{ 2025 }} {{ strings.site_title }}. {{ strings.footer_rights }} (<a href="{{ url_for('legal', lang=lang) }}">{{ strings.nav_legal }}</a>). </p>
+			<div class="social-icons">
+				{% for network, url in strings.social_networks.items() %}
+				<a href="{{ url }}" target="_blank" rel="noopener noreferrer" title="{{ network }}">
+					<img src="https://www.google.com/s2/favicons?domain={{ url.split('/')[2] }}&sz=32" alt="{{ url }}">
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+	</footer>
+	<script>
+		(function () {
+			var btn = document.querySelector('.nav-toggle');
+			var nav = document.getElementById('primary-nav');
+			if (!btn || !nav) return;
+			btn.addEventListener('click', function () {
+				var expanded = btn.getAttribute('aria-expanded') === 'true';
+				btn.setAttribute('aria-expanded', (!expanded).toString());
+				document.body.classList.toggle('nav-open');
+			});
+		})();
+		// Language dropdown (desktop)
+		(function(){
+			var trigger = document.querySelector('.lang-trigger');
+			var menu = document.getElementById('lang-menu');
+			if(!trigger || !menu) return;
+			function close(){ trigger.setAttribute('aria-expanded','false'); menu.classList.remove('open'); }
+			trigger.addEventListener('click', function(e){
+				var open = trigger.getAttribute('aria-expanded') === 'true';
+				if(open){ close(); } else { trigger.setAttribute('aria-expanded','true'); menu.classList.add('open'); }
+			});
+			document.addEventListener('click', function(e){ if(!menu.contains(e.target) && !trigger.contains(e.target)) close(); });
+			document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+		})();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page contact">
+	<h2>{{ page.title }}</h2>
+	<div class="page-content">
+		{{ page.content | safe }}
+	</div>
+	{% if page.store_links %}
+	<div class="contact-links">
+		{% for title, link in page.store_links.items() %}
+		<a href="{{ link }}" class="contact-button" {% if not link.startswith('mailto:') %}target="_blank"
+			rel="noopener" {% endif %}>
+			<span class="contact-button-title">{{ title }}</span>
+		</a>
+		{% endfor %}
+	</div>
+	{% endif %}
+</section>
+{% endblock %}

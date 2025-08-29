@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page about">
+    <div class="author-message">
+        <div class="author-profile">
+            {% if page.image %}
+            <div class="author-image">
+                <img src="{{ url_for('static', filename=page.image) }}" alt="{{ page.title }}">
+            </div>
+            {% endif %}
+            <h2 class="author-name">{{ page.title }}</h2>
+        </div>
+        <div class="message-content">
+            <div class="message-bubble">
+                {{ page.content | safe }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
