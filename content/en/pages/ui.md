@@ -14,7 +14,7 @@ gallery: Gallery
 all: All
 size: Size
 materials: Materials
-keywords: teddy bear,плюшевый медведь
+keywords: Teddy bear,vintage,handcrafted toy,collectible bear,gift,Teddy,plush bear,retro toy, collection,handmade,unique gift,vintage teddy bear
 published: Published
 social_networks:
   Bearpile: https://www.bearpile.com/TeddyPatam
