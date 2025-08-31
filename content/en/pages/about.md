@@ -1,6 +1,6 @@
 ---
 title: From author
-image: images/logo.jpeg
+image: images/logo.png
 ---
 
 Welcome to Teddy Patam — a cozy corner where hand-crafted teddy bears are born with character and care. Each teddy is designed, cut, stitched, and finished by hand, using premium mohair, cotton, and eco-friendly fillings.

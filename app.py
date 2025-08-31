@@ -311,7 +311,7 @@ def about(lang: str):
         "name": "Teddy Patam",
         "description": post.content,
         "url": f"{BASE_URL}/{lang}/about/",
-        "logo": "{BASE_URL}/static/images/logo.jpeg",
+        "logo": "{BASE_URL}/static/images/logo.png",
     }
 
     # Generate alternate URLs for other languages
