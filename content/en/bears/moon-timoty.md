@@ -12,7 +12,6 @@ cover_image: images/bears/moon-timoty/cover.png
 images:
   - images/bears/moon-timoty/IMG_3630.jpeg
   - images/bears/moon-timoty/IMG_3631_SnapseedCopy.jpeg
-  - images/bears/moon-timoty/IMG_3633.jpeg
   - images/bears/moon-timoty/IMG_3633_SnapseedCopy.jpeg
   - images/bears/moon-timoty/IMG_3637_SnapseedCopy.jpeg
   - images/bears/moon-timoty/IMG_3640.jpeg
