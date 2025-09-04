@@ -3,7 +3,7 @@ cover_image: images/bears/template/cover.png
 creation_date: 2025-08-15
 group: Bears
 keywords: теги,через,запятую
-materials: используемые материалы
+materials: материалы
 name: имя медведя
 pinned: false
 size: 28 см
