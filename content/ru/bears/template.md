@@ -1,21 +1,21 @@
 ---
-slug: template_id # идентификатор медведя, отображается в URL (например: timoty-moon)
-name: имя медведя
+cover_image: images/bears/template/cover.png
+creation_date: 2025-08-15
+group: Bears
 keywords: теги,через,запятую
-pinned: false (установить true, чтобы показать сначала)
-group: Bears #группа, которой принадлежит медведь (или другое изделие)
-creation_date: 2025-08-15 #дата публикации, влияет на порядок
-summary: короткое описание медведя
-size: размер (например: 28 см)
 materials: используемые материалы
-cover_image: images/bears/template/cover.png (небольшое изображение для галереи)
+name: имя медведя
+pinned: false
+size: 28 см
+slug: template
+summary: короткое описание медведя
 images:
   - images/bears/template/1.png
   - images/bears/template/2.png
   - images/bears/template/3.png
 store_links:
-  Магазин: https://www.example.com/shop/teddypatam
   Instagh: https://www.example.com/teddypatam
+  Магазин: https://www.example.com/shop/teddypatam
 ---
 
 Описание в формате Markdown
