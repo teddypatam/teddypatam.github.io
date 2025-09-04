@@ -11,8 +11,6 @@ slug: template
 summary: Short description for the bear
 images:
   - images/bears/template/1.png
-  - images/bears/template/2.png
-  - images/bears/template/3.png
 store_links:
   Channel: https://www.example.com/teddypatam
   Shop: https://www.example.com/shop/teddypatam
