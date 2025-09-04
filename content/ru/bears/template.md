@@ -11,8 +11,6 @@ slug: template
 summary: короткое описание медведя
 images:
   - images/bears/template/1.png
-  - images/bears/template/2.png
-  - images/bears/template/3.png
 store_links:
   Instagh: https://www.example.com/teddypatam
   Магазин: https://www.example.com/shop/teddypatam
