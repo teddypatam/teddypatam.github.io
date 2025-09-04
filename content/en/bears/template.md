@@ -1,21 +1,21 @@
 ---
-slug: template_id
-name: Bear name
-keywords: some,bear,keywords
-pinned: false (set true to show first)
-group: Group
+cover_image: images/bears/template/cover.png
 creation_date: 2025-08-15 # affects the order
-summary: Short description for the bear
-size: 28 cm
+group: Group
+keywords: some,bear,keywords
 materials: German mohair, glass eyes, cotton bow, recycled fill
-cover_image: images/bears/template/cover.png (small size for gallery)
+name: Bear name
+pinned: false
+size: 28 cm
+slug: template
+summary: Short description for the bear
 images:
   - images/bears/template/1.png
   - images/bears/template/2.png
   - images/bears/template/3.png
 store_links:
-  Shop: https://www.example.com/shop/teddypatam
   Channel: https://www.example.com/teddypatam
+  Shop: https://www.example.com/shop/teddypatam
 ---
 
 Description in Markdown format
