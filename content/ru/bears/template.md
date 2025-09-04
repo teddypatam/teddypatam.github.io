@@ -2,7 +2,7 @@
 cover_image: images/bears/template/cover.png
 creation_date: 2025-08-15
 group: Bears
-keywords: теги,через,запятую
+keywords: Tag1, Tag2, Tag3
 materials: материалы
 name: имя медведя
 pinned: false
