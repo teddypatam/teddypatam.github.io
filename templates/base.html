@@ -159,7 +159,7 @@
 		<div class="container footer-inner">
 			<p>© {{ 2025 }} {{ strings.site_title }}. {{ strings.footer_rights }} (<a href="{{ url_for('legal', lang=lang) }}">{{ strings.nav_legal }}</a>). </p>
 			<div class="social-icons">
-				{% for network, url in strings.social_networks.items() %}
+				{% for network, url in strings.store_links.items() %}
 				<a href="{{ url }}" target="_blank" rel="noopener noreferrer" title="{{ network }}">
 					<img src="https://www.google.com/s2/favicons?domain={{ url.split('/')[2] }}&sz=32" alt="{{ url }}">
 				</a>

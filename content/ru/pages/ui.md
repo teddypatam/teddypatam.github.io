@@ -16,7 +16,7 @@ size: Размер
 materials: Материалы
 keywords: мишка Тедди,teddy bear,handmade,винтаж,авторская игрушка,коллекционный мишка,подарок,Тедди,плюшевый медведь,ретро игрушка,коллекция,ручная работа,уникальный подарок,винтажный мишка Тедди
 published: Опубликовано
-social_networks:
+store_links:
   Bearpile: https://www.bearpile.com/TeddyPatam
   Pinterest: https://www.pinterest.com/teddypatam/
   VK: https://vk.com/teddypatam
