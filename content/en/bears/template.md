@@ -1,6 +1,6 @@
 ---
 cover_image: images/bears/template/cover.png
-creation_date: 2025-08-15 # affects the order
+creation_date: 2025-08-15
 group: Group
 keywords: some,bear,keywords
 materials: German mohair, glass eyes, cotton bow, recycled fill
