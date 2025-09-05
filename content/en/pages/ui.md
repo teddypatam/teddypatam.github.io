@@ -6,9 +6,7 @@ nav_about: About
 nav_contact: Contact
 nav_legal: Legal
 footer_rights: All rights reserved
-intro: >-
-  Each teddy is lovingly hand-crafted with premium materials
-  and created with a gentle soul.
+intro: Each teddy is lovingly hand-crafted with premium materials and created with a gentle soul.
 back: ← Back to Gallery
 gallery: Gallery
 all: All
