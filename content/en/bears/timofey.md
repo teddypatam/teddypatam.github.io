@@ -17,3 +17,4 @@ images:
   - images/bears/timofey/5.png
   - images/bears/timofey/6.png
 ---
+A tiny yet charming Teddy bear, crafted with love and attention to detail. A miniature friend that fits in your palm and brings warmth and coziness to any home.
