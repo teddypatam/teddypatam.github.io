@@ -2,7 +2,7 @@
 cover_image: images/bears/timofey/cover.png
 creation_date: 2025-05-20
 group: Miniature
-keywords: 
+keywords: handmade teddy bear, miniature teddy bear, collectible teddy bear, artist teddy bear, tiny teddy bear gift, pocket teddy bear, handmade plush bear, small teddy bear for collection, teddy bear gift for her, unique teddy bear toy
 materials: 
 name: 
 pinned: false
