@@ -1,14 +1,14 @@
 ---
 cover_image: images/bears/timofey/cover.png
 creation_date: 2025-05-20
-group: Miniature 
+group: Miniature
 keywords: 
 materials: 
 name: 
 pinned: false
 size: 
 slug: timofey
-summary: 
+summary: Handmade Miniature Teddy Bear – Collectible Gift
 images:
   - images/bears/timofey/1.png
   - images/bears/timofey/2.png
