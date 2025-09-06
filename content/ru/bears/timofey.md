@@ -8,7 +8,7 @@ name: Тимофей
 pinned: false
 size: 9,5
 slug: timofey
-summary: Классический, «чердачный» мишка 9,5 см
+summary: Миниатюрный плюшевый мишка ручной работы - коллекционный подарок
 images:
   - images/bears/timofey/1.png
   - images/bears/timofey/2.png
