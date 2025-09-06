@@ -1,7 +1,7 @@
 ---
 cover_image: images/bears/timofey/cover.png
 creation_date: 2025-05-20
-group: 
+group: Miniature 
 keywords: 
 materials: 
 name: 
