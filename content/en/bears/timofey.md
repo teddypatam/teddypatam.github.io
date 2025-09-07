@@ -3,10 +3,10 @@ cover_image: images/bears/timofey/cover.png
 creation_date: 2025-05-20
 group: Miniature
 keywords: handmade teddy bear, miniature teddy bear, collectible teddy bear, artist teddy bear, tiny teddy bear gift, pocket teddy bear, handmade plush bear, small teddy bear for collection, teddy bear gift for her, unique teddy bear toy
-materials: 
-name: 
+materials: Mohair (Germany), cedar sawdust, metal granules, glass eyes
+name: Timofey 
 pinned: false
-size: 
+size: 9,5 cm 
 slug: timofey
 summary: Handmade Miniature Teddy Bear – Collectible Gift
 images:
