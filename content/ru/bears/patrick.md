@@ -8,7 +8,7 @@ name: Патрик
 pinned: false
 size: 27 см
 slug: patrick
-summary: Патрик – Авторский мишка Тедди в осенних красках
+summary: Авторский мишка Тедди в осенних красках 27 см
 images:
   - images/bears/patrick/1.png
   - images/bears/patrick/2.png
