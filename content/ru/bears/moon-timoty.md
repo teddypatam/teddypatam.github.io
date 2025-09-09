@@ -8,7 +8,7 @@ name: Тимоша Лунный
 pinned: false
 size: 🐻 малыш 15 см
 slug: moon-timoty
-summary: Винтажный плюш
+summary: Винтажный плюшевый мишка в советском стиле 15 см 
 images:
   - images/bears/moon-timoty/IMG_3630.jpeg
   - images/bears/moon-timoty/IMG_3631_SnapseedCopy.jpeg
