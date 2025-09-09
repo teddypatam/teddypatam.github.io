@@ -1,12 +1,12 @@
 ---
 cover_image: images/bears/aleksandr/cover.png
-creation_date: 2025-09-09
+creation_date: 2025-05-12
 group: 
 keywords: 
 materials: 
-name: 
+name: Александр 
 pinned: false
-size: 
+size: 42 см
 slug: aleksandr
 summary: 
 images:
