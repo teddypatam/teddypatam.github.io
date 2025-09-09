@@ -8,7 +8,7 @@ name: Aleksandr
 pinned: false
 size: 42 cm
 slug: aleksandr
-summary: 
+summary: Collectible Mohair Teddy Bear, 42 cm
 images:
   - images/bears/aleksandr/1.png
   - images/bears/aleksandr/2.png
