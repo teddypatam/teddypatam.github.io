@@ -3,7 +3,7 @@ cover_image: images/bears/aleksandr/cover.png
 creation_date: 2025-05-12
 group: 
 keywords: 
-materials: 
+materials: Mohair (Germany), cedar sawdust, cedar wool, mineral granulate, glass eyes
 name: Aleksandr
 pinned: false
 size: 42 cm
