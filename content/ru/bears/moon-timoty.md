@@ -19,7 +19,6 @@ store_links:
   BearPile: https://www.bearpile.com/item/402243/11
   YouTube: https://youtu.be/lb_QYWNiNZY?si=yFpVcSdzvsOLXVdZ
 ---
-
 «Тимоша Лунный» сшит по выкройке А.Н.Изергиной 1944 г.
 
 Спокойный, мечтательный с грустинкой и задумчивостью во взгляде. 
