@@ -1,4 +1,6 @@
 ---
+BearPile: https://www.bearpile.com/item/398671/11
+YouTube: https://youtu.be/FQWq_f8gpjQ?si=uZZx-548Atolxn09 si=yFpVcSdzvsOLXVdZ
 cover_image: images/bears/aleksandr/cover.png
 creation_date: 2025-05-12
 group: 
@@ -8,6 +10,7 @@ name: Aleksandr
 pinned: false
 size: 42 cm
 slug: aleksandr
+stores_links: 
 summary: Collectible Mohair Teddy Bear, 42 cm
 images:
   - images/bears/aleksandr/1.png
