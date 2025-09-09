@@ -2,7 +2,7 @@
 cover_image: images/bears/aleksandr/cover.png
 creation_date: 2025-05-12
 group: 
-keywords: 
+keywords: artist teddy bear, autumn teddy bear, big bear, big friend, classic teddy, collectible teddy bear, German mohair, handmade teddy bear, mohair teddy bear, plush bear gift, Teddy bear
 materials: Mohair (Germany), cedar sawdust, cedar wool, mineral granulate, glass eyes
 name: Aleksandr
 pinned: false
