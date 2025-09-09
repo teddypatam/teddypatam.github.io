@@ -16,4 +16,8 @@ images:
   - images/bears/aleksandr/4.png
   - images/bears/aleksandr/5.png
   - images/bears/aleksandr/6.png
+store_links:
+  BearPile: https://www.bearpile.com/item/398671/11
+  YouTube: https://youtu.be/FQWq_f8gpjQ?si=uZZx-548Atolxn09 si=yFpVcSdzvsOLXVdZ
 ---
+
