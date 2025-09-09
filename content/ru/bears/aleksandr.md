@@ -3,7 +3,7 @@ cover_image: images/bears/aleksandr/cover.png
 creation_date: 2025-05-12
 group: 
 keywords: 
-materials: 
+materials: Мохер(Германия), кедровые опилки, кедровая шерсть, минеральный гранулят,стеклянные глаза
 name: Александр
 pinned: false
 size: 42 см
