@@ -8,7 +8,7 @@ name: Тимофей
 pinned: false
 size: 9,5 см
 slug: timofey
-summary: Миниатюрный плюшевый мишка ручной работы - коллекционный подарок
+summary: Миниатюрный плюшевый мишка ручной работы - коллекционный подарок 9,5 см
 images:
   - images/bears/timofey/1.png
   - images/bears/timofey/2.png
