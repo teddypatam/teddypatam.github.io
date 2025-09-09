@@ -8,7 +8,7 @@ name: Timothy the Moon
 pinned: false
 size: 🐻 Baby 15 cm
 slug: moon-timoty
-summary: Vintage plush
+summary: Collectible Teddy Bear Made of Vintage Plush 15 см
 images:
   - images/bears/moon-timoty/IMG_3630.jpeg
   - images/bears/moon-timoty/IMG_3631_SnapseedCopy.jpeg
