@@ -8,6 +8,7 @@ on:
       - 'content/**'
       - 'templates/**'
       - 'static/css/**'
+      - 'static/images/**'
       - app.py
       - freeze.py
 
