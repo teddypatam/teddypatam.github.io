@@ -10,11 +10,11 @@ size: 🐻 Baby 15 cm
 slug: moon-timoty
 summary: Collectible Teddy Bear Made of Vintage Plush 15 см
 images:
-  - images/bears/moon-timoty/IMG_3630.jpeg
-  - images/bears/moon-timoty/IMG_3631_SnapseedCopy.jpeg
-  - images/bears/moon-timoty/IMG_3633_SnapseedCopy.jpeg
-  - images/bears/moon-timoty/IMG_3637_SnapseedCopy.jpeg
-  - images/bears/moon-timoty/IMG_3640.jpeg
+  - images/bears/moon-timoty/1.jpeg
+  - images/bears/moon-timoty/2.jpeg
+  - images/bears/moon-timoty/3.jpeg
+  - images/bears/moon-timoty/4.jpeg
+  - images/bears/moon-timoty/5.jpeg
 store_links:
   BearPile: https://www.bearpile.com/item/402243/11
   YouTube: https://youtu.be/lb_QYWNiNZY?si=yFpVcSdzvsOLXVdZ
