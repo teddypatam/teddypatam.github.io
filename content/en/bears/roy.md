@@ -2,7 +2,7 @@
 cover_image: images/bears/roy/cover.png
 creation_date: 2025-06-28
 group: Miniature
-keywords: 
+keywords: viscose teddy bear, German viscose, cedar sawdust filling, metal granulate, glass eyes, collectible teddy bear, handmade teddy bear, miniature teddy bear, artist teddy bear, vintage style teddy bear, classic teddy, stuffed bear, teddy bear gift, teddy bear collection
 materials: Viscose (Germany), cedar sawdust, metal granulate, glass eyes
 name: Roy
 pinned: false
