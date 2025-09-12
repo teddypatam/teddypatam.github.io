@@ -16,5 +16,7 @@ images:
   - images/bears/roy/4.png
   - images/bears/roy/5.png
   - images/bears/roy/6.png
+store_links:
+  YouTube: https://youtube.com/shorts/-3Egfh_WiTQ?si=0dFh2UaBoVD0UT60 si=yFpVcSdzvsOLXVdZ
 ---
 Очаровательный классический мишка Тедди высотой всего 9,5 см. Одет в уютный свитер, дополненный подвеской в форме шишки, что придаёт образу особое зимнее настроение. Миниатюрный, но с характером, он станет прекрасным украшением коллекции или милым подарком.
