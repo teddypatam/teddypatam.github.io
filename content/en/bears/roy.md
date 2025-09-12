@@ -16,5 +16,7 @@ images:
   - images/bears/roy/4.png
   - images/bears/roy/5.png
   - images/bears/roy/6.png
+store_links:
+  YouTube: https://youtube.com/shorts/-3Egfh_WiTQ?si=0dFh2UaBoVD0UT60 si=yFpVcSdzvsOLXVdZ
 ---
 A charming classic Teddy bear standing just 9.5 cm tall. Dressed in a cozy sweater with a tiny pinecone pendant, he radiates a special winter charm. Small in size but full of character, he is a perfect addition to any collection or a delightful little gift.
