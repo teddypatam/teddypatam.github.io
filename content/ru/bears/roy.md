@@ -3,10 +3,10 @@ cover_image: images/bears/roy/cover.png
 creation_date: 2025-06-28
 group: Миниатюра
 keywords: 
-materials: 
+materials: Вискоза (Германия), кедровые опилки, металлический гранулят, стеклянные глазки
 name: Рой
 pinned: false
-size: 
+size: 9,5 см
 slug: roy
 summary: Классический мини-мишка в свитере
 images:
