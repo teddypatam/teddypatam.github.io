@@ -1,3 +1,25 @@
+.intro-social {
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+	margin: 12px 0 8px;
+	opacity: .95;
+}
+
+.intro-social a {
+	display: inline-flex;
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 4px 12px var(--shadow);
+	align-items: center;
+	justify-content: center;
+	transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.intro-social a:hover { transform: translateY(-1px); box-shadow: 0 6px 18px var(--shadow); }
+.intro-social img { width: 20px; height: 20px; }
 /* Typography */
 :root {
 	--bg: #fff8f4;
@@ -104,10 +126,18 @@ body {
 	filter: sepia(60%);
 }
 
+/* Intro page social icons overrides */
+.social-icons.intro-social {
+	justify-content: center;
+	width: 100%;
+	gap: 14px;
+	margin: 0 0 14px; /* adds space above intro-content */
+}
+
+
 /* Intro Section */
 .intro {
 	padding: 3rem 1rem;
-	margin: 2rem auto;
 	text-align: center;
 }
 

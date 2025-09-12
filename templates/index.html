@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <section class="intro">
+	<div class="social-icons intro-social">
+		{% for network, url in strings.store_links.items() %}
+		<a href="{{ url }}" target="_blank" rel="noopener noreferrer" title="{{ network }}">
+			<img src="https://www.google.com/s2/favicons?domain={{ url.split('/')[2] }}&sz=32" alt="{{ url }}">
+		</a>
+		{% endfor %}
+	</div>
     <div class="intro-content">
         <div class="intro-icon">🧸</div>
         <p class="intro-text">{{ strings.intro }}</p>
