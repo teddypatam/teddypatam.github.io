@@ -1,14 +1,14 @@
 ---
 cover_image: images/bears/roy/cover.png
 creation_date: 2025-06-28
-group: Miniature 
+group: Miniature
 keywords: 
 materials: 
 name: Roy
 pinned: false
 size: 
 slug: roy
-summary: 
+summary: Classic Mini Teddy in Sweater
 images:
   - images/bears/roy/1.png
   - images/bears/roy/2.png
@@ -17,3 +17,4 @@ images:
   - images/bears/roy/5.png
   - images/bears/roy/6.png
 ---
+A charming classic Teddy bear standing just 9.5 cm tall. Dressed in a cozy sweater with a tiny pinecone pendant, he radiates a special winter charm. Small in size but full of character, he is a perfect addition to any collection or a delightful little gift.
