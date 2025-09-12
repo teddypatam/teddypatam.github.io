@@ -3,10 +3,10 @@ cover_image: images/bears/roy/cover.png
 creation_date: 2025-06-28
 group: Miniature
 keywords: 
-materials: 
+materials: Viscose (Germany), cedar sawdust, metal granulate, glass eyes
 name: Roy
 pinned: false
-size: 
+size: 9,5 cm
 slug: roy
 summary: Classic Mini Teddy in Sweater
 images:
