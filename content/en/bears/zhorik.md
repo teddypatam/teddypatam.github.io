@@ -2,7 +2,7 @@
 cover_image: images/bears/zhorik/cover.png
 creation_date: 2025-04-01
 group: Miniature
-keywords: 
+keywords: buy a teddy bear, handmade teddy bear, artist teddy bear, collectible teddy bear, teddy bear gift, vintage teddy bear, miniature teddy bear, mohair teddy bear, viscose teddy bear, handmade soft toy
 materials: Viscose, mohair (Germany, cedar sawdust, glass, metal granules, glass eyes
 name: Zhorik
 pinned: false
