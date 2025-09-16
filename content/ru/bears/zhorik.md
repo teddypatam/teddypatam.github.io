@@ -8,7 +8,7 @@ name: Жорик
 pinned: false
 size: 12 см
 slug: zhorik
-summary: Мишка Тедди «Чайное настроение»
+summary: Мишка Тедди «Чайное настроение» 12см
 images:
   - images/bears/zhorik/1.png
   - images/bears/zhorik/2.png
