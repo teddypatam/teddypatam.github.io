@@ -17,6 +17,9 @@ images:
   - images/bears/zhorik/5.png
   - images/bears/zhorik/6.png
   - images/bears/zhorik/7.png
+store_links:
+  BearPile: https://www.bearpile.com/item/394856/11
+  YouTube: https://youtu.be/b85t9wxO8t4?si=9TDfjALqZLTFCRms
 ---
 Очаровательный мишка Тедди. 
 Сшит из вискозы и мохера, мягкий на ощупь и невероятно уютный. Пухленький и компактный — удобно лежит в ладошке и станет любимым украшением вашей коллекции или трогательным подарком.
