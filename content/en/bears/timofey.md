@@ -16,5 +16,8 @@ images:
   - images/bears/timofey/4.png
   - images/bears/timofey/5.png
   - images/bears/timofey/6.png
+store_links:
+  BearPile: https://www.bearpile.com/item/397752/11
+  YouTube: https://youtu.be/hmjA9RUSTOY?si=zbgnR0Bp0ru71n_3 si=9TDfjALqZLTFCRms
 ---
 A tiny yet charming Teddy bear, crafted with love and attention to detail. A miniature friend that fits in your palm and brings warmth and coziness to any home.
