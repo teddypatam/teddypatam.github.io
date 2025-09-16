@@ -17,6 +17,9 @@ images:
   - images/bears/zhorik/5.png
   - images/bears/zhorik/6.png
   - images/bears/zhorik/7.png
+store_links:
+  BearPile: https://www.bearpile.com/item/394856/11
+  YouTube: https://youtu.be/b85t9wxO8t4?si=9TDfjALqZLTFCRms
 ---
 **Adorable Teddy Bear.**
 Handmade from viscose and mohair, soft to the touch and incredibly cozy. Plump and compact — it fits perfectly in your hand and will become a charming addition to your collection or a heartfelt gift.
