@@ -8,7 +8,7 @@ name: Zhorik
 pinned: false
 size: 12 cm
 slug: zhorik
-summary: 
+summary: Teddy Bear “Tea Mood”
 images:
   - images/bears/zhorik/1.png
   - images/bears/zhorik/2.png
