@@ -8,7 +8,7 @@ name: Roy
 pinned: false
 size: 9,5 cm
 slug: roy
-summary: Classic Mini Teddy in Sweater
+summary: Classic Mini Teddy in Sweater 9,5 cm
 images:
   - images/bears/roy/1.png
   - images/bears/roy/2.png
