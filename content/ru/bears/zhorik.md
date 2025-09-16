@@ -1,12 +1,12 @@
 ---
 cover_image: images/bears/zhorik/cover.png
 creation_date: 2025-04-01
-group: Миниатюра 
+group: Миниатюра
 keywords: 
-materials: 
+materials: Вискоза, мохер (Германия, кедровые опилки, стеклянный, металлический гранулят, глазки стеклянные
 name: Жорик
 pinned: false
-size: 
+size: 12 см
 slug: zhorik
 summary: 
 images:
