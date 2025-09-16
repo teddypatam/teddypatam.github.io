@@ -8,7 +8,7 @@ name: Рой
 pinned: false
 size: 9,5 см
 slug: roy
-summary: Классический мини-мишка в свитере
+summary: Классический мини-мишка в свитере 9,5 см
 images:
   - images/bears/roy/1.png
   - images/bears/roy/2.png
