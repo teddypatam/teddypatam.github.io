@@ -1,12 +1,12 @@
 ---
 cover_image: images/bears/zhorik/cover.png
 creation_date: 2025-04-01
-group: Miniature 
+group: Miniature
 keywords: 
-materials: 
+materials: Viscose, mohair (Germany, cedar sawdust, glass, metal granules, glass eyes
 name: Zhorik
 pinned: false
-size: 
+size: 12 cm
 slug: zhorik
 summary: 
 images:
