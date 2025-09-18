@@ -8,7 +8,7 @@ name: Stepan
 pinned: false
 size: 13 cm
 slug: stepan
-summary: 
+summary: Teddy Bear Stepan — vintage bear 13 cm
 images:
   - images/bears/stepan/1.png
   - images/bears/stepan/2.png
