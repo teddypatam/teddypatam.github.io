@@ -15,5 +15,7 @@ images:
   - images/bears/stepan/3.png
   - images/bears/stepan/4.png
   - images/bears/stepan/5.png
+store_links:
+  BearPile: https://www.bearpile.com/item/396169/11
 ---
 Meet Stepan 🐻 — a classic Teddy bear inspired by the charming Soviet designs of the 1960s. Though petite in size, he’s plump, cozy, and full of character. With his tiny binoculars — a symbol of endless curiosity — Stepan is ready to explore the world with you. Perfectly sized to sit in your hand, he makes a delightful accent on any shelf and a treasured addition to a vintage Teddy bear collection.
