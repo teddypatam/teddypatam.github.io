@@ -1,12 +1,12 @@
 ---
 cover_image: images/bears/stepan/cover.png
 creation_date: 2025-04-09
-group: 
+group: Винтаж
 keywords: 
-materials: 
+materials: Винтажный плюш ручного окрашивания, кедровые опилки, металлический гранулят, глаза стеклянные (Германия). Голова и лапки на 5 шплинтах, полностью подвижны 
 name: Степан
 pinned: false
-size: 
+size: 13 см
 slug: stepan
 summary: 
 images:
