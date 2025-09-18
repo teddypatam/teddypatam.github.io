@@ -1,12 +1,12 @@
 ---
 cover_image: images/bears/stepan/cover.png
 creation_date: 2025-04-09
-group: 
+group: Vintage 
 keywords: 
-materials: 
+materials: Hand-dyed vintage plush, cedar sawdust, metallic granulate, glass eyes (Germany). Head and paws on 5 cotter pins, fully movable
 name: Stepan
 pinned: false
-size: 
+size: 13 cm
 slug: stepan
 summary: 
 images:
