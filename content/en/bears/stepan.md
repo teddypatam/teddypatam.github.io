@@ -2,7 +2,7 @@
 cover_image: images/bears/stepan/cover.png
 creation_date: 2025-04-09
 group: Vintage
-keywords: 
+keywords: teddy bear, vintage teddy, Soviet style bear, collectible bear, 1960s inspired toy, handmade teddy, plush bear, retro teddy, classic teddy bear, vintage style toy, nostalgic bear, artisan teddy
 materials: Hand-dyed vintage plush, cedar sawdust, metallic granulate, glass eyes (Germany). Head and paws on 5 cotter pins, fully movable
 name: Stepan
 pinned: false
