@@ -16,5 +16,8 @@ images:
   - images/bears/athanasius/4.png
   - images/bears/athanasius/5.png
   - images/bears/athanasius/6.png
+store_links:
+  BearPile: https://www.bearpile.com/item/389895/11
+  YouTube: https://youtu.be/UvRtgrbIBB0?si=rEbUHMvCysGbP61Q
 ---
 A vintage emerald green velvet teddy bear — an exquisite collectible and a stylish interior accent. Its velvet texture adds softness and depth of color, while the vintage collar highlights its unique charm. This teddy bear makes a thoughtful gift, a valuable addition to any collection, and brings an atmosphere of coziness and elegance.
