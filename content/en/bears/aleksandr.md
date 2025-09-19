@@ -18,6 +18,6 @@ images:
   - images/bears/aleksandr/3.png
   - images/bears/aleksandr/4.png
   - images/bears/aleksandr/5.png
-  - images/bears/aleksandr/6.png
+  - images/bears/aleksandr/6.png store_links:
 ---
 An elegant 42 cm Teddy bear crafted from luxurious mohair. His refined vintage collar adds a touch of charm and aristocracy. Large, dignified, yet irresistibly tender, he will become a true centerpiece of any collection and bring warmth to any home.
