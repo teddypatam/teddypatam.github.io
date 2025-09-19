@@ -3,7 +3,7 @@ cover_image: images/bears/athanasius/cover.png
 creation_date: 2025-01-22
 group: Vintage
 keywords: vintage teddy bear, vintage teddy bears, vintage teddy bear for sale, antique teddy bear, collectible teddy bears, retro teddy bear, vintage teddy bear shop, old teddy bear, vintage plush bear, handmade vintage teddy bear, collectible plush toys
-materials: 
+materials: Vintage velvet, cedar sawdust, cedar wool, metal granules, matte black glass eyes (Germany). Head and all limbs are movable. Joints with pins and discs (on 5 pins)
 name: Athanasius
 pinned: false
 size: 19.5 cm
