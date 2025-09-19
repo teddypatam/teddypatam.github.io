@@ -16,5 +16,8 @@ images:
   - images/bears/athanasius/4.png
   - images/bears/athanasius/5.png
   - images/bears/athanasius/6.png
+store_links:
+  BearPile: https://www.bearpile.com/item/389895/11
+  YouTube: https://youtu.be/UvRtgrbIBB0?si=rEbUHMvCysGbP61Q
 ---
 Винтажный мишка из бархата изумрудного цвета — изысканный коллекционный сувенир и стильный элемент интерьера. Бархатное покрытие придаёт игрушке мягкость и глубину оттенка, а винтажный воротник подчёркивает её особый шарм. Такой мишка станет оригинальным подарком, украсит коллекцию и привнесёт атмосферу уюта и аристократичности.
