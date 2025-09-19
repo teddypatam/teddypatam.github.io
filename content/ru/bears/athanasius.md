@@ -2,11 +2,11 @@
 cover_image: images/bears/athanasius/cover.png
 creation_date: 2025-01-22
 group: Винтаж
-keywords: 
+keywords: винтажный плюшевый мишка, винтажный медведь игрушка, купить винтажного медведя, антикварный плюшевый мишка, антикварные игрушки медведи, коллекционные медведи, мягкие игрушки винтаж, ретро медведь игрушка, плюшевый мишка коллекция
 materials: 
 name: Афанасий
 pinned: false
-size: 
+size: 19,5 см
 slug: athanasius
 summary: 
 images:
