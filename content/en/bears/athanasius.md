@@ -8,7 +8,7 @@ name: Athanasius
 pinned: false
 size: 19.5 cm
 slug: athanasius
-summary: 
+summary: Collectible Vintage Velvet Teddy Bear in Emerald with Collar  19,5 cm
 images:
   - images/bears/athanasius/1.png
   - images/bears/athanasius/2.png
@@ -17,3 +17,4 @@ images:
   - images/bears/athanasius/5.png
   - images/bears/athanasius/6.png
 ---
+A vintage emerald green velvet teddy bear — an exquisite collectible and a stylish interior accent. Its velvet texture adds softness and depth of color, while the vintage collar highlights its unique charm. This teddy bear makes a thoughtful gift, a valuable addition to any collection, and brings an atmosphere of coziness and elegance.
