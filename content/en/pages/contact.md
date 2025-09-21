@@ -5,5 +5,4 @@ store_links:
   Pinterest: https://www.pinterest.com/teddypatam/
   VK: https://vk.com/teddypatam
 ---
-
 For commissions, availability, or questions, please reach out through any of our channels below:
