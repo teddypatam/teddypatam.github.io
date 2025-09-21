@@ -18,6 +18,6 @@ images:
   - images/bears/aleksandr/6.png
 store_links:
   BearPile: https://www.bearpile.com/item/398671/11
-  YouTube: https://youtu.be/FQWq_f8gpjQ?si=uZZx-548Atolxn09 si=yFpVcSdzvsOLXVdZ
+  YouTube: https://youtu.be/FQWq_f8gpjQ?si=uZZx-548Atolxn09
 ---
 Элегантный мишка Тедди высотой 42 см, сшитый из роскошного мохера. Его изысканный винтажный воротник придаёт образу особое очарование и аристократичность. Большой, солидный и в то же время очень трогательный, он станет достойным украшением коллекции и источником уюта в доме.
