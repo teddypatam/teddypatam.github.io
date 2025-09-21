@@ -409,6 +409,10 @@ body {
 	box-shadow: 0 10px 24px var(--shadow);
 	transition: transform .2s ease, box-shadow .2s ease;
 	overflow: hidden;
+    /* Make footer align at bottom by using flex column layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
@@ -419,7 +423,9 @@ body {
 .card-link {
 	color: inherit;
 	text-decoration: none;
-	display: block;
+	display: flex; /* allow inner body to stretch */
+	flex-direction: column;
+	flex: 1 1 auto;
 }
 
 .card-media {
@@ -458,6 +464,8 @@ body {
 
 .card-body {
 	padding: 12px 14px 16px;
+	/* allow summary area to grow and push footer down */
+	flex: 1 1 auto;
 }
 
 .card-title {
@@ -473,7 +481,8 @@ body {
 }
 
 .card-footer {
-	margin-top: 12px;
+	/* auto top margin pushes it to bottom of flex container (card) */
+	margin-top: auto;
 	padding: 12px;
 	display: flex;
 	gap: 8px;
