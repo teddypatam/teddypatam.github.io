@@ -67,9 +67,13 @@
 			</a>
 			{% if bear.store_links %}
 			<div class="card-footer">
-				{% for title, link in bear.store_links.items() %}
+				{% set _links = bear.store_links.items() | list %}
+				{% for title, link in _links[:2] %}
 				<a href="{{ link }}" class="store-button" target="_blank" rel="noopener">{{ title }}</a>
 				{% endfor %}
+				{% if _links|length > 2 %}
+				<a href="{{ url_for('bear_detail', lang=lang, slug=bear.slug if bear.slug else bear['slug']) }}" class="store-button" aria-label="{{ (_links|length - 2) }} more links">+{{ _links|length - 2 }}</a>
+				{% endif %}
 			</div>
 			{% endif %}
 		</li>
