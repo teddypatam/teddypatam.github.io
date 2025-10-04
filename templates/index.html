@@ -9,7 +9,9 @@
 		{% endfor %}
 	</div>
     <div class="intro-content">
-        <div class="intro-icon">🧸</div>
+        <div class="intro-icon">
+            <img width="48" height="48" src="{{ url_for('static', filename='images/bear.png') }}" alt="bear icon">
+        </div>
         <p class="intro-text">{{ strings.intro }}</p>
         <div class="intro-decoration">
 			<div class="sparkle sparkle-1" aria-hidden="true">
