@@ -14,6 +14,7 @@ size: Size
 materials: Materials
 keywords: Teddy bear,vintage,handcrafted toy,collectible bear,gift,Teddy,plush bear,retro toy,collection,handmade,unique gift,vintage teddy bear
 published: Published
+select_group: Select
 store_links:
   Bearpile: https://www.bearpile.com/TeddyPatam
   Pinterest: https://www.pinterest.com/teddypatam/

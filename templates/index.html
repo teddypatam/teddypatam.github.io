@@ -35,13 +35,33 @@
 
 {% if groups and groups|length > 0 %}
 <section class="filters">
-	<div class="segmented" role="tablist" aria-label="Filter by group">
-		<button class="segmented-btn active" data-filter="all" role="tab" aria-selected="true">{{ strings.all }} ({{
-			total_count }})</button>
-		{% for g in groups %}
-		<button class="segmented-btn" data-filter="{{ g }}" role="tab" aria-selected="false">{{ g }} ({{
-			group_counts.get(g, 0) }})</button>
-		{% endfor %}
+	<div class="filter-row">
+		<div class="segmented" role="tablist" aria-label="Filter by group">
+			<button class="segmented-btn active" data-filter="all" role="tab" aria-selected="true">{{ strings.all }} ({{
+				total_count }})</button>
+			<div class="dropdown">
+				<button class="segmented-btn" aria-haspopup="true" aria-expanded="false">
+					<span class="dropdown-label"> {{ strings.select_group }} </span>
+					<svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16">
+						<path d="M7 10l5 5 5-5z" fill="currentColor"/>
+					</svg>
+				</button>
+				<div class="segmented-menu">
+					{% for g in groups %}
+					<button class="segmented-btn menu-item" data-filter="{{ g }}" role="tab" aria-selected="false">{{ g }} ({{
+						group_counts.get(g, 0) }})</button>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="active-filter" style="display: none">
+			<span class="filter-text"></span>
+			<button class="filter-remove" aria-label="Remove filter">
+				<svg viewBox="0 0 24 24" width="14" height="14">
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+				</svg>
+			</button>
+		</div>
 	</div>
 </section>
 {% endif %}
@@ -85,10 +105,19 @@
 
 <script>
 	(function () {
-		var segmented = document.querySelector('.segmented');
-		if (!segmented) return;
-		var buttons = Array.prototype.slice.call(segmented.querySelectorAll('.segmented-btn'));
+		var filterRow = document.querySelector('.filter-row');
+		if (!filterRow) return;
+
+		var segmented = filterRow.querySelector('.segmented');
+		var dropdown = segmented.querySelector('.dropdown');
+		var dropdownToggle = dropdown.querySelector('.segmented-btn');
+		var dropdownMenu = dropdown.querySelector('.segmented-menu');
+		var allButton = segmented.querySelector('.segmented-btn[data-filter="all"]');
+		var dropdownItems = Array.prototype.slice.call(dropdownMenu.querySelectorAll('.menu-item'));
 		var cards = Array.prototype.slice.call(document.querySelectorAll('#bear-grid .card'));
+		var activeFilter = filterRow.querySelector('.active-filter');
+		var activeFilterText = activeFilter.querySelector('.filter-text');
+
 		function applyFilter(val) {
 			cards.forEach(function (card) {
 				var g = card.getAttribute('data-group') || '';
@@ -96,13 +125,63 @@
 				card.style.display = show ? '' : 'none';
 			});
 		}
-		buttons.forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
-				btn.classList.add('active');
-				btn.setAttribute('aria-selected', 'true');
-				applyFilter(btn.getAttribute('data-filter'));
+
+		function updateActiveFilter(text) {
+			if (text === 'all') {
+				activeFilter.style.display = 'none';
+				activeFilterText.textContent = '';
+			} else {
+				activeFilterText.textContent = text;
+				activeFilter.style.display = 'inline-flex';
+			}
+		}
+
+		// Handle dropdown toggle
+		dropdownToggle.addEventListener('click', function(e) {
+			var expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+			dropdownToggle.setAttribute('aria-expanded', !expanded);
+			dropdownMenu.style.display = expanded ? 'none' : 'block';
+			e.stopPropagation();
+		});
+
+		// Close dropdown when clicking outside
+		document.addEventListener('click', function() {
+			dropdownToggle.setAttribute('aria-expanded', 'false');
+			dropdownMenu.style.display = 'none';
+		});
+
+		// Handle "All" button click
+		allButton.addEventListener('click', function() {
+			segmented.querySelectorAll('.segmented-btn').forEach(function(btn) {
+				btn.classList.remove('active');
+				btn.setAttribute('aria-selected', 'false');
 			});
+			allButton.classList.add('active');
+			allButton.setAttribute('aria-selected', 'true');
+			updateActiveFilter('all');
+			applyFilter('all');
+		});
+
+		// Handle dropdown item clicks
+		dropdownItems.forEach(function(item) {
+			item.addEventListener('click', function() {
+				var filterValue = item.getAttribute('data-filter');
+				segmented.querySelectorAll('.segmented-btn').forEach(function(btn) {
+					btn.classList.remove('active');
+					btn.setAttribute('aria-selected', 'false');
+				});
+				item.classList.add('active');
+				item.setAttribute('aria-selected', 'true');
+				updateActiveFilter(item.textContent.trim());
+				dropdownToggle.setAttribute('aria-expanded', 'false');
+				dropdownMenu.style.display = 'none';
+				applyFilter(filterValue);
+			});
+		});
+
+		// Handle remove filter click
+		activeFilter.querySelector('.filter-remove').addEventListener('click', function() {
+			allButton.click();
 		});
 	})();
 </script>

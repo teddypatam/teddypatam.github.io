@@ -14,6 +14,7 @@ published: Опубликовано
 site_tagline: Авторские плюшевые мишки Тедди
 site_title: Teddy Patam
 size: Размер
+select_group: Выбрать
 store_links:
   Bearpile: https://www.bearpile.com/TeddyPatam
   Pinterest: https://pin.it/6booJEYkk
