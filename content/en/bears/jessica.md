@@ -21,14 +21,14 @@ store_links:
 ---
 Jessica is the most delicate girl 🐻
 
-Height 26 cm, sitting 19.5 cm.
+Height 26 cm, sitting 19.5 cm.  
 
-• Material - Mohair (Germany)
-• Stuffing: cedar sawdust, cedar wool, mineral granules in the body for weight. The stuffing is dense.
-• Head and all paws are movable. Joints are splint and disk. (On 5 splints)
-• Eyes are black - glass (Germany)
-• Decoration: bead necklace on a lock with a pendant (glass). Can be removed. Bow - natural viscose
-• Tinting with oil paints.
-• The nose is embroidered with threads and waxed.
+• Material - Mohair (Germany).  
+• Stuffing: cedar sawdust, cedar wool, mineral granules in the body for weight. The stuffing is dense.  
+• Head and all paws are movable. Joints are splint and disk (on 5 splints).  
+• Eyes are black - glass (Germany).  
+• Decoration: bead necklace on a lock with a pendant (glass). Can be removed. Bow - natural viscose.  
+• Tinting with oil paints.  
+• The nose is embroidered with threads and waxed.  
 
 I found the house🏡
