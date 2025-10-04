@@ -88,7 +88,7 @@ body {
 
 /* Filter Styles */
 .filters {
-	padding: 0;
+	padding: 8px 0 0;
 }
 
 .filter-row {
@@ -420,11 +420,6 @@ body {
 .intro {
 	padding: 24px 0 8px;
 	color: var(--muted);
-}
-
-/* Filters */
-.filters {
-	padding: 8px 0 0;
 }
 
 .segmented {
@@ -1324,103 +1319,6 @@ body {
 	filter: opacity(25%);
 	filter: saturate(30%);
 	filter: sepia(60%);
-}
-
-/* Filter Styles */
-.filter-container {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin: 24px 0;
-}
-
-.filter-btn {
-    padding: 8px 16px;
-    border: 1px solid var(--primary);
-    background: white;
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filter-btn.active {
-    background: var(--primary);
-    color: white;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-toggle {
-    padding: 8px 16px;
-    border: 1px solid var(--primary);
-    background: white;
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 160px;
-    justify-content: space-between;
-}
-
-.dropdown-toggle:hover,
-.filter-btn:hover {
-    background: var(--bg-accent);
-}
-
-.dropdown-arrow {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.2s ease;
-}
-
-.dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    margin-top: 4px;
-    box-shadow: 0 4px 12px var(--shadow);
-    display: none;
-    z-index: 1000;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 8px 16px;
-    border: none;
-    background: none;
-    text-align: left;
-    color: var(--text);
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.dropdown-item:hover {
-    background: var(--bg-accent);
-}
-
-.dropdown-item.active {
-    background: var(--primary);
-    color: white;
 }
 
 /* Responsive adjustments */
