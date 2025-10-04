@@ -1,7 +1,7 @@
 ---
 cover_image: images/bears/marik/cover.png
 creation_date: 2025-01-28
-group: Teddy's friends
+group: Teddy's Friends
 keywords: 
 materials: 
 name: Mario

@@ -3,7 +3,7 @@ BearPile: https://www.bearpile.com/item/398671/11
 YouTube: https://youtu.be/FQWq_f8gpjQ?si=uZZx-548Atolxn09 si=yFpVcSdzvsOLXVdZ
 cover_image: images/bears/aleksandr/cover.png
 creation_date: 2025-05-12
-group: Mohair bears
+group: Mohair Bears
 keywords: artist teddy bear, autumn teddy bear, big bear, big friend, classic teddy, collectible teddy bear, German mohair, handmade teddy bear, mohair teddy bear, plush bear gift, Teddy bear
 materials: Mohair (Germany), cedar sawdust, cedar wool, mineral granulate, glass eyes
 name: Aleksandr

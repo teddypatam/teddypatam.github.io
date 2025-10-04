@@ -1,7 +1,7 @@
 ---
 cover_image: images/bears/jessica/cover.png
 creation_date: 2024-03-02
-group: Mohair bears
+group: Mohair Bears
 keywords: teddy bear girl, mohair teddy, classic teddy, handmade teddy bear, collectible teddy, 26 cm teddy, teddy with classic pattern, artisanal toy, handmade mohair bear, teddy girl, collectible toy, interior teddy, teddy doll
 materials: Mohair (Germany), glass eyes, cedar sawdust, cedar wood wool, mineral granulate
 name: Jessica

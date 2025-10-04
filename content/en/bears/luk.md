@@ -1,7 +1,7 @@
 ---
 cover_image: images/bears/luk/cover.png
 creation_date: 2025-03-26
-group: Teddy’s Friend 
+group: Teddy's Friends 
 keywords: teddy monkey, viscose monkey, handmade toy, artisanal toy, collectible monkey, teddy toy, miniature toy, soft toy, handmade gift, teddy collection
 materials: Viscose, cedar sawdust, metal granulation, glass eyes
 name: Luk
