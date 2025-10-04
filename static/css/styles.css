@@ -432,9 +432,14 @@ body {
 	aspect-ratio: 3/4;
 	background: #fff;
 	position: relative;
+	/* Fallback for browsers that don't support aspect-ratio */
+	padding-bottom: 133.333%; /* 4:3 aspect ratio (4/3 = 1.333) */
 }
 
 .card-media img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
