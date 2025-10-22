@@ -1,14 +1,14 @@
 ---
 cover_image: images/bears/bufi/cover.png
 creation_date: 2025-10-14
-group: 
+group: Plush German
 keywords: teddy bear, soft teddy bear, collectible teddy bear, handmade teddy bear, plush bear, vanilla teddy bear, honey color bear, amber eyes teddy, vintage key teddy, cozy teddy, gift for her, gift for child, handmade toy, soft toy gift, teddy art doll
 materials: German plush, cedar sawdust, cedar wood wool, wool padding, mineral granulate, glass eyes
 name: Buff
 pinned: false
 size: 28 cm
 slug: bufi
-summary: Teddy Bear Bafi is a soft vanilla marshmallow-colored teddy bear with amber eyes
+summary: Teddy Bear Bafi is a soft vanilla marshmallow-colored teddy bear with amber eyes 28 cm
 images:
   - images/bears/bufi/1.png
   - images/bears/bufi/2.png
