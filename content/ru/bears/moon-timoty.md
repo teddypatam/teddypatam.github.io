@@ -17,7 +17,7 @@ images:
   - images/bears/moon-timoty/5.jpeg
 store_links:
   BearPile: https://www.bearpile.com/item/402243/11
-  YouTube: https://youtu.be/lb_QYWNiNZY?si=yFpVcSdzvsOLXVdZ
+  RUTUBE: https://rutube.ru/shorts/58ca80403ae70c62d5fde2bc14177342/
 ---
 «Тимоша Лунный» сшит по выкройке А.Н.Изергиной 1944 г.
 
