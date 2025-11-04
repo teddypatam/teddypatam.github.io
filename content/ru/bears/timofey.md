@@ -18,6 +18,6 @@ images:
   - images/bears/timofey/6.png
 store_links:
   BearPile: https://www.bearpile.com/item/397752/11
-  YouTube: https://youtu.be/hmjA9RUSTOY?si=zbgnR0Bp0ru71n_3 si=9TDfjALqZLTFCRms
+  RUTUBE: https://rutube.ru/shorts/2de1091ecd387df300084ca0321b4a2f/
 ---
 Маленький, но очень трогательный мишка Тедди, созданный с любовью и вниманием к деталям. Миниатюрный друг, который поместится в ладони и принесёт уют и тепло в любой дом.
