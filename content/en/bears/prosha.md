@@ -1,14 +1,14 @@
 ---
 cover_image: images/bears/prosha/cover.png
 creation_date: 2025-11-12
-group: 
-keywords: 
+group: Miniature 
+keywords: vintage teddy bear, vintage teddy bears, vintage teddy bear for sale, antique teddy bear, collectible teddy bears, retro teddy bear, vintage teddy bear shop, old teddy bear, vintage plush bear, handmade vintage teddy bear, collectible plush toys
 materials: Viscose, glass eyes, cedar sawdust, metallic granulate
-name: Prosha 
+name: Prosha
 pinned: false
 size: 13 cm
 slug: prosha
-summary: Teddy bear - a perfect little companion!
+summary: Teddy bear - a perfect little companion! 13 cm
 images:
   - images/bears/prosha/1.png
   - images/bears/prosha/2.png
