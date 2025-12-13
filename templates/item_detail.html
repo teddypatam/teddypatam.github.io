@@ -332,19 +332,33 @@
 					track.style.transform = `translateX(${target}px)`;
 					track.addEventListener('transitionend', function handler(){
 						track.removeEventListener('transitionend', handler);
-						nextImage();
-						track.style.transition = 'none';
-						centerTrack(false);
-						requestAnimationFrame(()=> track.style.transition='');
+						// Preload the target image first to avoid brief flash when wrapping
+						const targetIdx = (currentIndex + 1) % images.length;
+						const targetSrc = images[targetIdx].src;
+						const tmpImg = new Image();
+						tmpImg.onload = function(){
+							nextImage();
+							track.style.transition = 'none';
+							centerTrack(false);
+							requestAnimationFrame(()=> track.style.transition='');
+						};
+						tmpImg.src = targetSrc;
 					}, {once:true});
 				} else if (commitPrev) {
 					track.style.transform = 'translateX(0px)';
 					track.addEventListener('transitionend', function handler(){
 						track.removeEventListener('transitionend', handler);
-						prevImage();
-						track.style.transition = 'none';
-						centerTrack(false);
-						requestAnimationFrame(()=> track.style.transition='');
+						// Preload the previous image first to avoid brief flash when wrapping
+						const targetIdx = (currentIndex - 1 + images.length) % images.length;
+						const targetSrc = images[targetIdx].src;
+						const tmpImg = new Image();
+						tmpImg.onload = function(){
+							prevImage();
+							track.style.transition = 'none';
+							centerTrack(false);
+							requestAnimationFrame(()=> track.style.transition='');
+						};
+						tmpImg.src = targetSrc;
 					}, {once:true});
 				} else {
 					centerTrack(true);
