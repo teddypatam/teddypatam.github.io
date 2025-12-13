@@ -778,6 +778,18 @@ body {
 	transition: transform 0.2s ease;
 }
 
+/* When the canonical center image (`#lightbox-image`) is inserted into the
+   swipe track it may retain ID-based sizing (e.g. max-width using vw/vh).
+   Override those ID rules while it's inside the track so all three images
+   share identical sizing constraints and avoid layout shifts. */
+.lightbox-swipe-track #lightbox-image {
+	width: 100% !important;
+	max-width: 100% !important;
+	max-height: calc(100dvh - 140px) !important;
+	height: auto !important;
+	object-fit: contain !important;
+}
+
 .lightbox-swipe-track.dragging img {
 	transition: none !important;
 }
