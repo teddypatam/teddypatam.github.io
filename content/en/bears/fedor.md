@@ -22,8 +22,10 @@ store_links:
 ---
 The Fedor bear was created according to the Soviet pattern of the 1950s.
 13 cm standing. A constant companion in the palm of your hand or will be happy to be placed on a shelf.
+
 • Sewn from German viscose, glass eyes, cedar sawdust and metallic granules — the bear is pleasantly heavy.
+
 • Thick padding — the toy holds its shape well. 
--Accessory: Soviet lace and Soviet ribbon
+
 • Can stand on its own. 
 I found the house 🏡
