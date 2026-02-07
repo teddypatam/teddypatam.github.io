@@ -820,6 +820,7 @@ body {
 	transition: all 0.2s ease;
 	z-index: 1001;
 	padding: 0;
+	touch-action: manipulation;
 }
 
 .lightbox-close svg {
@@ -849,6 +850,7 @@ body {
 	transition: all 0.2s ease;
 	z-index: 1001;
 	padding: 0;
+	touch-action: manipulation;
 }
 
 .lightbox-nav svg {

@@ -168,6 +168,14 @@
 		prevBtn.addEventListener('click', prevImage);
 		nextBtn.addEventListener('click', nextImage);
 
+		// Prevent Safari's double-tap zoom gesture on buttons
+		[closeBtn, prevBtn, nextBtn].forEach(btn => {
+			btn.addEventListener('gesturestart', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+			}, { passive: false });
+		});
+
 		// Keyboard navigation
 		document.addEventListener('keydown', function (e) {
 			if (!lightbox.classList.contains('active')) return;
