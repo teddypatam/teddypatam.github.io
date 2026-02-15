@@ -1,7 +1,7 @@
 ---
 cover_image: images/bears/marik/cover.png
 creation_date: 2025-01-28
-group: Teddy's Friends
+group: Teddy’s Friends
 keywords: teddy rabbit, viscose bunny, handmade toy, teddy animal, bunny in sweater, collectible rabbit, teddy bunny, soft toy rabbit, artisanal toy, interior toy, handmade bunny, teddy collection, teddy plush, handmade gift, dressed rabbit toy
 materials: Viscose (Germany), cedar sawdust, glass granulate, glass eyes (Germany)
 name: Mario
