@@ -1,5 +1,5 @@
 ---
-cover_image: 
+cover_image: images/bears/innokenty/cover.png
 creation_date: 2026-06-18
 group: Mohair Bears
 keywords: teddy bear, handmade, artist teddy bear, collectable teddy bear, mohair teddy bear, hand crafted, ooak teddy bear, mohair bear, vintage style, interior toy, collectible toy, plush bear, handmade gift, traditional teddy, artist bear
